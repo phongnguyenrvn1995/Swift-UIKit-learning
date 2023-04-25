@@ -16,8 +16,6 @@ class ViewController: UITableViewController {
         title = "View Storm"
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(onActionBtnTap))
-        
         let fm = FileManager.default
         let path = Bundle.main.resourcePath!
         let items = try! fm.contentsOfDirectory(atPath: path)
@@ -49,12 +47,6 @@ class ViewController: UITableViewController {
             vc.detail = "Picture \(indexPath.row + 1) of \(pictures.count)"
             navigationController?.pushViewController(vc, animated: true)
         }
-    }
-    
-    @objc func onActionBtnTap() {
-        let ac = UIActivityViewController(activityItems: ["Project 1"], applicationActivities: [])
-        ac.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
-        present(ac, animated: true)
     }
 }
 
