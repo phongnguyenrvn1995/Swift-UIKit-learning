@@ -17,15 +17,14 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupBar()
-        loadData()
+        performSelector(inBackground: #selector(loadData), with: nil)
     }
     
-    func loadData() {
+    @objc func loadData() {
         var urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
         if navigationController?.tabBarItem.tag != 0 {
             urlString = "https://www.hackingwithswift.com/samples/petitions-2.json"
         }
-        
         
         if let url = URL(string: urlString) {
             if let data = try? Data(contentsOf: url) {
@@ -35,10 +34,9 @@ class ViewController: UITableViewController {
                 filter()
                 return
             }
-            
-            showError()
         }
         
+        performSelector(onMainThread: #selector(showError), with: nil, waitUntilDone: false)
     }
     
     func setupBar() {
@@ -83,21 +81,27 @@ class ViewController: UITableViewController {
     }
     
     func filter() {
-        if(!filterString.isEmpty) {
-            navigationItem.title = "Search: \(filterString)"
-        } else {
-            navigationItem.title = "All petitions"
+        DispatchQueue.main.async { [weak self] in
+            if(!(self?.filterString.isEmpty ?? false) == true) {
+                self?.navigationItem.title = "Search: \(self?.filterString ?? "")"
+            } else {
+                self?.navigationItem.title = "All petitions"
+            }
         }
+        
         petition = allPetition.filter({ petition in
             filterString.isEmpty
             || petition.body.lowercased().contains(filterString.lowercased())
             || petition.title.contains(filterString.lowercased())
             || "\(petition.signatureCount)".contains(filterString.lowercased())
         })
-        tableView.reloadData()
+        
+        tableView.performSelector(onMainThread: #selector(UITableView.reloadData), with: nil, waitUntilDone: false)
+//            self?.tableView.reloadData()
+        
     }
     
-    func showError() {
+    @objc func showError() {
         let ac = UIAlertController(title: "Somethings wrong", message: "There were some issues while loading the website, please try again", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .default))
         present(ac, animated: true)
