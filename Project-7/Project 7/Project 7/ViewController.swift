@@ -26,19 +26,20 @@ class ViewController: UITableViewController {
             urlString = "https://www.hackingwithswift.com/samples/petitions-2.json"
         }
         
-        
-        if let url = URL(string: urlString) {
-            if let data = try? Data(contentsOf: url) {
-                print("data: \(data)")
-                parse(data: data)
-                filterString = ""
-                filter()
-                return
+        DispatchQueue.global(qos: .userInteractive).async { [weak self] in
+            if let url = URL(string: urlString) {
+                if let data = try? Data(contentsOf: url) {
+                    print("data: \(data)")
+                    self?.parse(data: data)
+                    self?.filterString = ""
+                    self?.filter()
+                    return
+                }
+                
+                self?.performSelector(onMainThread: #selector(self?.showError), with: nil, waitUntilDone: false)
+//                    .showError()
             }
-            
-            showError()
         }
-        
     }
     
     func setupBar() {
@@ -64,7 +65,8 @@ class ViewController: UITableViewController {
         ac.addAction(UIAlertAction(title: "OK", style: .default) { [unowned ac, weak self] _ in
             if let str = ac.textFields?[0].text {
                 self?.filterString = str.lowercased().trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-                self?.filter()
+                self?.performSelector(inBackground: #selector(self?.filter), with: nil)
+//                self?.filter()
             }
         })
         ac.addAction(UIAlertAction(title: "View all", style: .default) {[weak self] _ in
@@ -82,11 +84,13 @@ class ViewController: UITableViewController {
         }
     }
     
-    func filter() {
-        if(!filterString.isEmpty) {
-            navigationItem.title = "Search: \(filterString)"
-        } else {
-            navigationItem.title = "All petitions"
+    @objc func filter() {
+        DispatchQueue.main.async { [weak self] in
+            if(!self!.filterString.isEmpty) {
+                self?.navigationItem.title = "Search: \(self!.filterString)"
+            } else {
+                self?.navigationItem.title = "All petitions"
+            }
         }
         petition = allPetition.filter({ petition in
             filterString.isEmpty
@@ -94,10 +98,13 @@ class ViewController: UITableViewController {
             || petition.title.contains(filterString.lowercased())
             || "\(petition.signatureCount)".contains(filterString.lowercased())
         })
-        tableView.reloadData()
+        
+        tableView.performSelector(onMainThread: #selector(UITableView.reloadData), with: nil, waitUntilDone: false)
+//            tableView.reloadData()
     }
     
-    func showError() {
+    
+    @objc func showError() {
         let ac = UIAlertController(title: "Somethings wrong", message: "There were some issues while loading the website, please try again", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .default))
         present(ac, animated: true)

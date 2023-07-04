@@ -134,7 +134,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func loadLevel() {
+    @objc func loadLevel() {
         solutions.removeAll()
         var clueDisplay = ""
         var solutionDisplay = ""
@@ -164,16 +164,23 @@ class ViewController: UIViewController {
             }
         }
         
-        cluesLabel.text = clueDisplay.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-        answersLabel.text = solutionDisplay.trimmingCharacters(in: .whitespacesAndNewlines)
+        DispatchQueue.main.async { [weak cluesLabel, weak answersLabel] in
+            cluesLabel?.text = clueDisplay.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+            answersLabel?.text = solutionDisplay.trimmingCharacters(in: .whitespacesAndNewlines)
+        }
         
         bitLetters.shuffle()
         
         if(bitLetters.count == letterButtons.count) {
             for (index, item) in bitLetters.enumerated() {
-                letterButtons[index].setTitle(item, for: .normal)
+                let btn = letterButtons[index]
+                DispatchQueue.main.async { [weak btn] in
+                    btn?.setTitle(item, for: .normal)
+                }
+//                letterButtons[index].setTitle(item, for: .normal)
             }
         }
+        
     }
     
     @objc func onLetterTapped(_ sender: UIButton) {
@@ -229,7 +236,8 @@ class ViewController: UIViewController {
             level = 1
         }
         
-        loadLevel()
+        performSelector(inBackground: #selector(loadLevel), with: nil)
+        //loadLevel()
         for item in letterButtons {
             item.isHidden = false
         }
@@ -238,6 +246,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        loadLevel()
+        performSelector(inBackground: #selector(loadLevel), with: nil)
+//        loadLevel()
     }
 }
