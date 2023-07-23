@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ViewController.unMaskCurrentLetters(character:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.wrongLetters.didset:ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "wrongSignals.count - 1 - index">
+            </PersistentString>
+            <PersistentString
+               value = "wrongLetters">
+            </PersistentString>
+            <PersistentString
+               value = "wrongSignals">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
