@@ -41,7 +41,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let background = SKSpriteNode(imageNamed: "background")
         background.position = CGPoint(x: sceneWidth/2, y: sceneHeight/2)
         background.blendMode = .replace
-        background.zPosition = -1
+        background.zPosition = -2
         addChild(background)
         
         scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
@@ -150,6 +150,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         baseSlot.position = position
         baseGlow.position = position
+        baseGlow.zPosition = -1
         
         baseSlot.physicsBody = SKPhysicsBody(rectangleOf: baseSlot.size)
         baseSlot.physicsBody?.isDynamic = false
