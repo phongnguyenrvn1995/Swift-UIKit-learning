@@ -77,7 +77,12 @@ class ViewController: UIViewController {
                 self.summaryResult()
             }
         }))
-        present(ac, animated: true)
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.1, initialSpringVelocity: 5, animations: { [weak sender] in
+            sender?.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+        }) { [weak self, weak sender] _ in
+            self?.present(ac, animated: true)
+            sender?.transform = .identity
+        }
     }
     
     private func showTitleWithScore() {

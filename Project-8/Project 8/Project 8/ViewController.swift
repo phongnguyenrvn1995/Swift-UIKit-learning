@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var sessionTaped = 0
     var scoreLabel: UILabel!
     var cluesLabel: UILabel!
     var answersLabel: UILabel!
@@ -20,7 +21,13 @@ class ViewController: UIViewController {
         }.count
     }
     
-    var activatedButtons = [UIButton]()
+    var activatedButtons : [UIButton] = [] {
+        didSet {
+            if activatedButtons.count == 0 {
+                sessionTaped = 0
+            }
+        }
+    }
     var solutions = [String]()
     
     var level = 1
@@ -188,20 +195,34 @@ class ViewController: UIViewController {
         guard let buttonTitle = sender.titleLabel?.text else { return }
         currentAnswer.text = currentAnswer.text?.appending(buttonTitle)
         activatedButtons.append(sender)
-        sender.isHidden = true
+        UIView.animate(withDuration: 1, delay: 0, animations: { [weak sender] in
+            sender?.alpha = 0
+        }) {[weak sender, weak self] _ in
+            sender?.isHidden = true
+            self?.sessionTaped += 1
+        }
     }
     
     @objc func onClearTapped(_ sender: UIButton) {
+        if sessionTaped != activatedButtons.count { return }
 //        print("onClearTapped \(sender)")
-        currentAnswer.text = ""
-        for item in activatedButtons {
-            item.isHidden = false
-        }
+        currentAnswer.text = ""//        for item in activatedButtons {
+            UIView.animate(withDuration: 1, delay: 0, animations: { [unowned self] in
+                for item in self.activatedButtons {
+                    item.isHidden = false
+                }
+                for item in self.activatedButtons {
+                    item.alpha = 1
+                }
+            }) { [unowned self] _ in
+                activatedButtons.removeAll()
+            }
+//        }
         
-        activatedButtons.removeAll()
     }
     
     @objc func onSubmitTapped(_ sender: UIButton) {
+        if sessionTaped != activatedButtons.count { return }
 //        print("onSubmitTapped \(sender)")
         guard let answerText = currentAnswer.text else { return }
         guard let solutionPosition = solutions.firstIndex(of: answerText) else {
@@ -240,6 +261,7 @@ class ViewController: UIViewController {
         //loadLevel()
         for item in letterButtons {
             item.isHidden = false
+            item.alpha = 1
         }
     }
     
