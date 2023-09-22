@@ -1,0 +1,353 @@
+[
+  {
+    "name": "United States",
+    "capital": "Washington, D.C.",
+    "population": 331002651,
+    "area_sq_km": 9372610,
+    "languages": [
+      "English"
+    ],
+    "currency": "United States Dollar (USD)",
+    "flag_url": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1920px-Flag_of_the_United_States.svg.png",
+    "major_cities": [
+      "New York City",
+      "Los Angeles",
+      "Chicago"
+    ],
+    "interesting_facts": [
+      "The United States is the third most populous country in the world.",
+      "It has a diverse culture with people from all over the world."
+    ]
+  },
+  {
+    "name": "Canada",
+    "capital": "Ottawa",
+    "population": 37742154,
+    "area_sq_km": 9984670,
+    "languages": [
+      "English",
+      "French"
+    ],
+    "currency": "Canadian Dollar (CAD)",
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/1920px-Flag_of_Canada_%28Pantone%29.svg.png",
+    "major_cities": [
+      "Toronto",
+      "Montreal",
+      "Vancouver"
+    ],
+    "interesting_facts": [
+      "Canada is the second-largest country in the world by land area.",
+      "It has two official languages: English and French."
+    ]
+  },
+  {
+    "name": "India",
+    "capital": "New Delhi",
+    "population": 1380004385,
+    "area_sq_km": 3287263,
+    "languages": [
+      "Hindi",
+      "English"
+    ],
+    "currency": "Indian Rupee (INR)",
+    "flag_url": "https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1920px-Flag_of_India.svg.png",
+    "major_cities": [
+      "Mumbai",
+      "Bangalore",
+      "Kolkata"
+    ],
+    "interesting_facts": [
+      "India is the world's largest democracy.",
+      "It is known for its rich cultural heritage and diverse cuisine."
+    ]
+  },
+  {
+    "name": "United Kingdom",
+    "capital": "London",
+    "population": 67886011,
+    "area_sq_km": 242900,
+    "languages": [
+      "English"
+    ],
+    "currency": "British Pound (GBP)",
+    "flag_url": "https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1920px-Flag_of_the_United_Kingdom.svg.png",
+    "major_cities": [
+      "Manchester",
+      "Birmingham",
+      "Glasgow"
+    ],
+    "interesting_facts": [
+      "The UK is made up of four countries: England, Scotland, Wales, and Northern Ireland.",
+      "It has a constitutional monarchy with Queen Elizabeth II as the current monarch."
+    ]
+  },
+  {
+    "name": "Australia",
+    "capital": "Canberra",
+    "population": 25499884,
+    "area_sq_km": 7692024,
+    "languages": [
+      "English"
+    ],
+    "currency": "Australian Dollar (AUD)",
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Flag_of_Australia.svg/1920px-Flag_of_Australia.svg.png",
+    "major_cities": [
+      "Sydney",
+      "Melbourne",
+      "Brisbane"
+    ],
+    "interesting_facts": [
+      "Australia is both a country and a continent.",
+      "It's known for its unique wildlife, including kangaroos and koalas."
+    ]
+  },
+  {
+    "name": "China",
+    "capital": "Beijing",
+    "population": 1444216107,
+    "area_sq_km": 9706961,
+    "languages": [
+      "Mandarin"
+    ],
+    "currency": "Chinese Yuan (CNY)",
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/1920px-Flag_of_the_People%27s_Republic_of_China.svg.png",
+    "major_cities": [
+      "Shanghai",
+      "Guangzhou",
+      "Shenzhen"
+    ],
+    "interesting_facts": [
+      "China is the most populous country in the world.",
+      "It has a rich history dating back thousands of years."
+    ]
+  },
+  {
+    "name": "Brazil",
+    "capital": "Brasília",
+    "population": 212559417,
+    "area_sq_km": 8515767,
+    "languages": [
+      "Portuguese"
+    ],
+    "currency": "Brazilian Real (BRL)",
+    "flag_url": "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/1920px-Flag_of_Brazil.svg.png",
+    "major_cities": [
+      "São Paulo",
+      "Rio de Janeiro",
+      "Salvador"
+    ],
+    "interesting_facts": [
+      "Brazil is the largest country in South America.",
+      "It's known for its vibrant culture, including samba and carnival."
+    ]
+  },
+  {
+    "name": "Russia",
+    "capital": "Moscow",
+    "population": 145934462,
+    "area_sq_km": 17125242,
+    "languages": [
+      "Russian"
+    ],
+    "currency": "Russian Ruble (RUB)",
+    "flag_url": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1920px-Flag_of_Russia.svg.png",
+    "major_cities": [
+      "Saint Petersburg",
+      "Novosibirsk",
+      "Yekaterinburg"
+    ],
+    "interesting_facts": [
+      "Russia is the largest country in the world by land area.",
+      "It spans across Europe and Asia."
+    ]
+  },
+  {
+    "name": "Japan",
+    "capital": "Tokyo",
+    "population": 126476461,
+    "area_sq_km": 377975,
+    "languages": [
+      "Japanese"
+    ],
+    "currency": "Japanese Yen (JPY)",
+    "flag_url": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1920px-Flag_of_Japan.svg.png",
+    "major_cities": [
+      "Osaka",
+      "Nagoya",
+      "Sapporo"
+    ],
+    "interesting_facts": [
+      "Japan is known for its advanced technology and traditional culture.",
+      "It's an archipelago consisting of four main islands."
+    ]
+  },
+  {
+    "name": "Mexico",
+    "capital": "Mexico City",
+    "population": 128932753,
+    "area_sq_km": 1964375,
+    "languages": [
+      "Spanish"
+    ],
+    "currency": "Mexican Peso (MXN)",
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/1920px-Flag_of_Mexico.svg.png",
+    "major_cities": [
+      "Guadalajara",
+      "Monterrey",
+      "Puebla"
+    ],
+    "interesting_facts": [
+      "Mexico is known for its cuisine, including tacos and guacamole.",
+      "It has a rich history, including the ancient Mayan and Aztec civilizations."
+    ]
+  },
+  {
+    "name": "South Africa",
+    "capital": "Pretoria (administrative), Bloemfontein (judicial), Cape Town (legislative)",
+    "population": 59308690,
+    "area_sq_km": 1221037,
+    "languages": [
+      "Afrikaans",
+      "English",
+      "Zulu",
+      "Xhosa",
+      "Sotho",
+      "Tswana",
+      "Swazi",
+      "Venda",
+      "Tsonga",
+      "Ndebele"
+    ],
+    "currency": "South African Rand (ZAR)",
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Flag_of_South_Africa.svg/1920px-Flag_of_South_Africa.svg.png",
+    "major_cities": [
+      "Johannesburg",
+      "Cape Town",
+      "Durban"
+    ],
+    "interesting_facts": [
+      "South Africa is known for its diverse cultures and languages.",
+      "It was the host of the 2010 FIFA World Cup."
+    ]
+  },
+  {
+    "name": "Germany",
+    "capital": "Berlin",
+    "population": 83783942,
+    "area_sq_km": 357022,
+    "languages": [
+      "German"
+    ],
+    "currency": "Euro (EUR)",
+    "flag_url": "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1920px-Flag_of_Germany.svg.png",
+    "major_cities": [
+      "Munich",
+      "Hamburg",
+      "Cologne"
+    ],
+    "interesting_facts": [
+      "Germany is known for its engineering and automotive industries.",
+      "It's famous for its beer culture and Oktoberfest."
+    ]
+  },
+  {
+    "name": "France",
+    "capital": "Paris",
+    "population": 65273511,
+    "area_sq_km": 551695,
+    "languages": [
+      "French"
+    ],
+    "currency": "Euro (EUR)",
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/1920px-Flag_of_France.svg.png",
+    "major_cities": [
+      "Marseille",
+      "Lyon",
+      "Toulouse"
+    ],
+    "interesting_facts": [
+      "France is known for its art, fashion, and cuisine.",
+      "It's home to famous landmarks like the Eiffel Tower."
+    ]
+  },
+  {
+    "name": "Spain",
+    "capital": "Madrid",
+    "population": 46754778,
+    "area_sq_km": 505990,
+    "languages": [
+      "Spanish"
+    ],
+    "currency": "Euro (EUR)",
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/1920px-Flag_of_Spain.svg.png",
+    "major_cities": [
+      "Barcelona",
+      "Valencia",
+      "Seville"
+    ],
+    "interesting_facts": [
+      "Spain is famous for its siestas, a short afternoon nap.",
+      "It's known for its passionate flamenco dancing."
+    ]
+  },
+  {
+    "name": "Argentina",
+    "capital": "Buenos Aires",
+    "population": 45195777,
+    "area_sq_km": 2780400,
+    "languages": [
+      "Spanish"
+    ],
+    "currency": "Argentine Peso (ARS)",
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/1920px-Flag_of_Argentina.svg.png",
+    "major_cities": [
+      "Cordoba",
+      "Rosario",
+      "Mendoza"
+    ],
+    "interesting_facts": [
+      "Argentina is known for its tango music and dance.",
+      "It's home to the southernmost city in the world, Ushuaia."
+    ]
+  },
+  {
+    "name": "Italy",
+    "capital": "Rome",
+    "population": 60461826,
+    "area_sq_km": 301340,
+    "languages": [
+      "Italian"
+    ],
+    "currency": "Euro (EUR)",
+    "flag_url": "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/1920px-Flag_of_Italy.svg.png",
+    "major_cities": [
+      "Milan",
+      "Naples",
+      "Turin"
+    ],
+    "interesting_facts": [
+      "Italy is known for its rich history, art, and architecture.",
+      "It's famous for its cuisine, including pasta and pizza."
+    ]
+  },
+  {
+    "name": "Nigeria",
+    "capital": "Abuja",
+    "population": 206139587,
+    "area_sq_km": 923768,
+    "languages": [
+      "English"
+    ],
+    "currency": "Nigerian Naira (NGN)",
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Nigeria.svg/1920px-Flag_of_Nigeria.svg.png",
+    "major_cities": [
+      "Lagos",
+      "Kano",
+      "Ibadan"
+    ],
+    "interesting_facts": [
+      "Nigeria is the most populous country in Africa.",
+      "It's known for its diverse cultures and languages."
+    ]
+  }
+]
