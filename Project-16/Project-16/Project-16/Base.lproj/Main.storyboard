@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DfE-0v-hJq">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project_16" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWG-7S-bdR">
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bWG-7S-bdR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PBe-db-XzG"/>
+                            <constraint firstItem="bWG-7S-bdR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xs2-8x-AQs"/>
+                            <constraint firstItem="bWG-7S-bdR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gIb-4d-8f4"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="bWG-7S-bdR" secondAttribute="bottom" constant="-34" id="uJn-QR-0C8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qja-MW-XmK"/>
+                    <connections>
+                        <outlet property="mapView" destination="bWG-7S-bdR" id="sei-OJ-gfe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.27480916030527" y="3.5211267605633805"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="kHI-2U-rIH">
+            <objects>
+                <viewController storyboardIdentifier="detail" id="mBh-Rb-tYK" customClass="DetailViewController" customModule="Project_16" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fej-F0-v9j">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oce-76-irz">
+                                <rect key="frame" x="16" y="59" width="361" height="759"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7Ux-NG-uBu">
+                                <rect key="frame" x="16" y="814" width="361" height="4"/>
+                            </progressView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Wtg-QB-4FD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Oce-76-irz" firstAttribute="top" secondItem="Wtg-QB-4FD" secondAttribute="top" id="4K4-uL-thJ"/>
+                            <constraint firstItem="Oce-76-irz" firstAttribute="trailing" secondItem="Fej-F0-v9j" secondAttribute="trailingMargin" id="5Gm-Uu-bUk"/>
+                            <constraint firstItem="7Ux-NG-uBu" firstAttribute="bottom" secondItem="Oce-76-irz" secondAttribute="bottom" id="Eby-2B-V0J"/>
+                            <constraint firstItem="Oce-76-irz" firstAttribute="bottom" secondItem="Wtg-QB-4FD" secondAttribute="bottom" id="K8Z-DB-rio"/>
+                            <constraint firstItem="7Ux-NG-uBu" firstAttribute="leading" secondItem="Oce-76-irz" secondAttribute="leading" id="drD-zJ-za0"/>
+                            <constraint firstItem="Oce-76-irz" firstAttribute="leading" secondItem="Fej-F0-v9j" secondAttribute="leadingMargin" id="pFj-uo-Kd5"/>
+                            <constraint firstItem="7Ux-NG-uBu" firstAttribute="trailing" secondItem="Oce-76-irz" secondAttribute="trailing" id="vTS-oO-Yxe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progressBar" destination="7Ux-NG-uBu" id="xau-WK-uBK"/>
+                        <outlet property="webView" destination="Oce-76-irz" id="5ei-rP-RUx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kqc-c0-YQN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1968.7022900763359" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="U80-mX-V9B">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DfE-0v-hJq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Evq-Mo-dEc">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cW4-cv-gVE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BVT-wQ-zmP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17.557251908396946" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
