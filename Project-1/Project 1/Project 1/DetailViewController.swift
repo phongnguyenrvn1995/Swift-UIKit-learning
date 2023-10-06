@@ -16,6 +16,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         title = detail
         navigationItem.largeTitleDisplayMode = .never
+        assert(selectedImage != nil, "There is no image")
         if let selectedImage = selectedImage {
             imageView.image = UIImage(named: selectedImage)
         }
