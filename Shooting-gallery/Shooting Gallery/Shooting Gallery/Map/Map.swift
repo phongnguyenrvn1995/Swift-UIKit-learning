@@ -116,6 +116,7 @@ class Map: PMap {
         bg.size.width = GameViewController.SCREEN_WIDTH
         bg.size.height = GameViewController.SCREEN_HEIGHT
         bg.zPosition = -1
+        bg.blendMode = .replace
         return bg
     }
     
