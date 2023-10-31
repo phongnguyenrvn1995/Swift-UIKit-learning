@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ViewController: UIViewController {
     @IBOutlet var button1: UIButton!
@@ -32,6 +33,33 @@ class ViewController: UIViewController {
         button3.layer.borderColor = UIColor.lightGray.cgColor
         askQuestion()
         initBarButton()
+        scheduleReminders()
+    }
+    
+    func scheduleReminders() {
+        let content = UNMutableNotificationContent()
+        content.title = "Flag guessing"
+        content.body = "Play me today?"
+        content.sound = .default
+        content.badge = 1
+        
+        var dateComponent = DateComponents()
+        let date = Date()
+        dateComponent.hour = Calendar.current.component(.hour, from: date)
+        dateComponent.minute = Calendar.current.component(.minute, from: date)
+        dateComponent.second = Calendar.current.component(.second, from: date) + 3
+        
+//        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponent, repeats: false)
+        
+        let center = UNUserNotificationCenter.current()
+        center.removeAllDeliveredNotifications()
+        center.removeAllPendingNotificationRequests()
+        for i in 1...7 {
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval((24 * 60 * 60 * i)), repeats: false)
+            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+            
+            center.add(request)
+        }
     }
     
     func initBarButton() {
