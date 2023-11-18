@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project_22" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNKNOWN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4J-tV-h8E">
+                                <rect key="frame" x="94.666666666666671" y="414.66666666666669" width="203.66666666666663" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSO-k2-3jI">
+                                <rect key="frame" x="141" y="140" width="111" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x6a-Lt-Eja">
+                                <rect key="frame" x="68" y="298" width="257" height="256"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="F5J-rd-4cJ"/>
+                                    <constraint firstAttribute="width" constant="257" id="dFN-Em-c2b"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="x6a-Lt-Eja" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0Uh-td-C8a"/>
+                            <constraint firstItem="m4J-tV-h8E" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="73x-Km-QaE"/>
+                            <constraint firstItem="x6a-Lt-Eja" firstAttribute="centerX" secondItem="m4J-tV-h8E" secondAttribute="centerX" id="7NY-Az-sIp"/>
+                            <constraint firstItem="oSO-k2-3jI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Kh2-Nz-CJl"/>
+                            <constraint firstItem="m4J-tV-h8E" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="O5c-Ng-uwG"/>
+                            <constraint firstItem="oSO-k2-3jI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="81" id="caP-O0-Rn4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="beaconName" destination="oSO-k2-3jI" id="Nir-kv-QoD"/>
+                        <outlet property="distanceImage" destination="x6a-Lt-Eja" id="nJj-xM-b49"/>
+                        <outlet property="distanceReading" destination="m4J-tV-h8E" id="CJQ-B0-6wk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
