@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "927CE09D-D807-43E9-A6A9-C51283E9F68B"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "E50157C0-2399-445E-8AEA-8512ABDE1B16"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1"
+            scope = "1"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5956E8CC-EEBC-4FAE-88AF-799808190C84"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Milestone-Projects-28-30/CardsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "handleLongPress(uIGestureRecognizer:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0F0CA5FA-E621-4C99-A85C-B25AB1696734"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Milestone-Projects-28-30/GamePlay01ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "initBoard()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0F0CA5FA-E621-4C99-A85C-B25AB1696734 - db474c6799bcb580"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Milestone_Projects_28_30.GamePlay01ViewController.initBoard() -&gt; ()"
+                  moduleName = "Milestone-Projects-28-30"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phongnguyenhoang/Swift-UIKit-learning/Milestone-Projects-28-30/Milestone-Projects-28-30/Milestone-Projects-28-30/GamePlay01ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "0F0CA5FA-E621-4C99-A85C-B25AB1696734 - db474c6799bcb580"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Milestone_Projects_28_30.GamePlay01ViewController.initBoard() -&gt; ()"
+                  moduleName = "Milestone-Projects-28-30"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phongnguyenhoang/Swift-UIKit-learning/Milestone-Projects-28-30/Milestone-Projects-28-30/Milestone-Projects-28-30/GamePlay01ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "220">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ECB208F9-1592-470A-8DED-AF3BCB0E963F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Milestone-Projects-28-30/GamePlay01ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "randomCards()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "972F57B6-FCFB-4008-B11D-E9D43B660377"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Milestone-Projects-28-30/GamePlay01ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "randomCards()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ACD60B5A-C862-4E18-81AE-A4CB94EB5AA7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Milestone-Projects-28-30/GamePlay01ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "checkGameOver()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "ACD60B5A-C862-4E18-81AE-A4CB94EB5AA7 - e12badb3be003754"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Milestone_Projects_28_30.GamePlay01ViewController.checkGameOver() -&gt; ()"
+                  moduleName = "Milestone-Projects-28-30"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phongnguyenhoang/Swift-UIKit-learning/Milestone-Projects-28-30/Milestone-Projects-28-30/Milestone-Projects-28-30/GamePlay01ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "166"
+                  endingLineNumber = "166"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "ACD60B5A-C862-4E18-81AE-A4CB94EB5AA7 - 3565dab74a76a9b5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UIButton) -&gt; Swift.Bool in Milestone_Projects_28_30.GamePlay01ViewController.checkGameOver() -&gt; ()"
+                  moduleName = "Milestone-Projects-28-30"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phongnguyenhoang/Swift-UIKit-learning/Milestone-Projects-28-30/Milestone-Projects-28-30/Milestone-Projects-28-30/GamePlay01ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "167"
+                  endingLineNumber = "167"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "ACD60B5A-C862-4E18-81AE-A4CB94EB5AA7 - e12badb3be003754"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Milestone_Projects_28_30.GamePlay01ViewController.checkGameOver() -&gt; ()"
+                  moduleName = "Milestone-Projects-28-30"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phongnguyenhoang/Swift-UIKit-learning/Milestone-Projects-28-30/Milestone-Projects-28-30/Milestone-Projects-28-30/GamePlay01ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "166"
+                  endingLineNumber = "166"
+                  offsetFromSymbolStart = "60">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

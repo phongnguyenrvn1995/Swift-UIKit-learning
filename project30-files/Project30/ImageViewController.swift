@@ -95,3 +95,13 @@ class ImageViewController: UIViewController {
 		owner.dirty = true
 	}
 }
+
+extension UIImage {
+    convenience init?(uncache name: String) {
+        if let path = Bundle.main.path(forResource: name, ofType: nil) {
+            self.init(contentsOfFile: path)
+        } else {
+            return nil
+        }
+    }
+}
